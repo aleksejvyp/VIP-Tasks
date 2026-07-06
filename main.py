@@ -20,8 +20,10 @@ def delete(dct):
     if len(inp)==2 and inp[1].isdigit():
         theme = inp[0].capitalize()
         num = int(inp[1])
-        if len(dct[theme])>=num and num>=1 and theme in dct:
+        if theme in dct and len(dct[theme])>=num>=1:
             dct[theme].pop(num-1)
+        if not dct[theme]:
+            del dct[theme]
         save(dct)
     else:
         print("Ошибка, попробуйте снова")
@@ -52,13 +54,17 @@ while True:
     if len(ideas)>0:
         vyvod(ideas)
     print("Выберите действие:","1 - add element","2 - delete element","3 - exit", sep = "\n")
-    value = int(input())
+    try:
+        value = int(input())
+    except ValueError:
+        print("Введите число:")
+        continue
     match value:
         case 1:
             new_idea(ideas)
         case 2:
             delete(ideas)
         case 3:
-            exit()
+            break
         case _ :
             print("Несуществующая команда") 
