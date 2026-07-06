@@ -68,3 +68,4 @@ while True:
             break
         case _ :
             print("Несуществующая команда") 
+            
