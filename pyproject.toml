@@ -1,0 +1,28 @@
+[project]
+name = "vip-tasks"
+version = "1.0.0"
+description = "A desktop ToDo application with categories built using Flet."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "ALEKSEI VIP"}
+]
+dependencies = [
+    "flet>=0.85.3"
+]
+
+[dependency-groups]
+dev = [
+    "flet-cli>=0.85.3",
+    "flet-desktop>=0.85.3",
+    "flet-web>=0.85.3",
+]
+
+[tool.flet]
+org = "com.vip"
+product = "VIP Tasks"
+company = "VIP"
+copyright = "© 2026 VIP"
+
+[tool.flet.app]
+path = "src"

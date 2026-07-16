@@ -1,1 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Build
+build/
+dist/
+
+# PyInstaller
+*.spec
+
+# IDE
+.vscode/
+.idea/
+
+# User data
 tasks.json
+category.json
