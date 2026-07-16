@@ -1,6 +1,6 @@
 # VIP Todo
 
-![alt text](src/assets/icon.ico)
+![alt text](src/assets/icon.png)
 
 Desktop ToDo application built with Flet.
 
