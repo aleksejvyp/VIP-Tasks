@@ -18,6 +18,7 @@ dist/
 # IDE
 .vscode/
 .idea/
+.vs/
 
 # User data
 tasks.json
