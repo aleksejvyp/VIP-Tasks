@@ -39,7 +39,7 @@ Desktop ToDo application built with Flet.
 
 ```bash
 git clone https://github.com/aleksejvyp/VIP-Tasks.git
-cd VIP-Todo
+cd VIP-Tasks
 pip install -r requirements.txt
 flet run
 ```
