@@ -46,7 +46,7 @@ class Task(ft.Column):
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
             controls=[
                 self.edit_name,
-                self.get_category(self.task_category),  # FIX: теперь создаёт новый Dropdown
+                self.get_category(self.task_category), 
                 ft.IconButton(
                     icon=ft.Icons.DONE_OUTLINE_OUTLINED,
                     icon_color=ft.Colors.GREEN,
@@ -64,7 +64,7 @@ class Task(ft.Column):
         self.controls = [self.display_view, self.edit_view]
 
     def update_categories(self, categories):
-        dropdown = self.edit_view.controls[1]  # тот самый Dropdown из режима редактирования
+        dropdown = self.edit_view.controls[1] 
         dropdown.options = [ft.dropdown.Option(cat) for cat in categories]
 
     # если текущая категория больше не существует — сбрасываем на первую
@@ -88,7 +88,7 @@ class Task(ft.Column):
 
     def save_clicked(self, e):
         new_name = self.edit_name.value.strip()
-        new_category = self.edit_view.controls[1].value  # FIX: берём значение из нового Dropdown
+        new_category = self.edit_view.controls[1].value  # берём значение из нового Dropdown
 
         if not new_name:
             self.cancel_clicked(e)
@@ -116,7 +116,7 @@ class VIPTodoApp(ft.Column):
 
         self.category = self.all_category()
 
-        # FIX: фабрика для создания Dropdown
+        # фабрика для создания Dropdown
         def make_category_dropdown(value=None):
             return ft.Dropdown(
                 label="Категория",
@@ -152,7 +152,7 @@ class VIPTodoApp(ft.Column):
             ],
         )
 
-        # FIX: отдельный Dropdown для удаления категории
+        # отдельный Dropdown для удаления категории
         self.delete_category_dropdown = self.make_category_dropdown()
 
         self.add_category_dialog = ft.AlertDialog(
@@ -356,7 +356,7 @@ class VIPTodoApp(ft.Column):
             self.save,
             task_category,
             completed,
-            self.get_category  # FIX: теперь создаёт новый Dropdown
+            self.get_category
         )
         self.tasks.controls.append(task)
         self.update()
